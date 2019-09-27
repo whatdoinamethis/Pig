@@ -89,6 +89,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmz-Vm-NI4">
+                                <rect key="frame" x="111" y="517" width="193" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Touch Here to Roll"/>
+                                <connections>
+                                    <action selector="rollPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUH-fs-zlX"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Pigged out!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-Cc-uef">
+                                <rect key="frame" x="147" y="438" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlL-nD-EbU">
+                                <rect key="frame" x="176" y="233" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="End Turn"/>
+                                <connections>
+                                    <action selector="endTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="siH-Is-MTT"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXH-8g-Wyg">
+                                <rect key="frame" x="118" y="322" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -102,6 +132,10 @@
                         <outlet property="buttonOne" destination="r4F-0q-Wvu" id="Fdr-TE-P1c"/>
                         <outlet property="buttonThree" destination="zFc-9d-frG" id="9pF-NV-wYY"/>
                         <outlet property="buttonTwo" destination="JSq-sm-3ZZ" id="X62-IV-IaQ"/>
+                        <outlet property="endTurn" destination="BlL-nD-EbU" id="l9a-g8-6Kz"/>
+                        <outlet property="pigOut" destination="eul-Cc-uef" id="QpB-Xt-q0n"/>
+                        <outlet property="rollButton" destination="Vmz-Vm-NI4" id="wjq-NH-6IV"/>
+                        <outlet property="scoreLabel" destination="hXH-8g-Wyg" id="KOh-Qe-a9Z"/>
                         <outlet property="startQuestion" destination="PJO-MN-Ube" id="45E-4b-eJT"/>
                     </connections>
                 </viewController>
