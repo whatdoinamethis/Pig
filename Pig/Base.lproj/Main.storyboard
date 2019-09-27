@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="490" width="200" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Tap Here to Roll"/>
+                                <state key="normal" title="Touch Here to Roll"/>
                                 <connections>
                                     <action selector="rollPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8H-FO-7yr"/>
                                 </connections>
