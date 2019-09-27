@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     var Score1 : Int = 0
     var Score2 : Int = 0
     var Score3 : Int = 0
-    var Score4 : Int = 00
+    var Score4 : Int = 0
     
     @IBAction func onePlayer(_ sender: Any) {
         howManyPlayers = 1
