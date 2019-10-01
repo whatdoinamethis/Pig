@@ -119,6 +119,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU WIN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flh-Gd-5YP">
+                                <rect key="frame" x="11" y="38" width="393" height="824"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.21156383074981278" blue="0.24360928893189726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acQ-jH-0Y4">
+                                <rect key="frame" x="169" y="492" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play again?"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxP-zo-Lde"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -134,9 +149,11 @@
                         <outlet property="buttonTwo" destination="JSq-sm-3ZZ" id="X62-IV-IaQ"/>
                         <outlet property="endTurn" destination="BlL-nD-EbU" id="l9a-g8-6Kz"/>
                         <outlet property="pigOut" destination="eul-Cc-uef" id="QpB-Xt-q0n"/>
+                        <outlet property="playAgainButton" destination="acQ-jH-0Y4" id="v9m-KP-nbJ"/>
                         <outlet property="rollButton" destination="Vmz-Vm-NI4" id="wjq-NH-6IV"/>
                         <outlet property="scoreLabel" destination="hXH-8g-Wyg" id="KOh-Qe-a9Z"/>
                         <outlet property="startQuestion" destination="PJO-MN-Ube" id="45E-4b-eJT"/>
+                        <outlet property="winLabel" destination="flh-Gd-5YP" id="Cc7-lj-MXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

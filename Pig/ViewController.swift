@@ -9,11 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    struct players {
-        var score: Int
-        var name: String
-    }
-    var howManyPlayers = 0
+    @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet var buttonOne: UIButton!
     @IBOutlet var buttonTwo: UIButton!
     @IBOutlet var buttonThree: UIButton!
@@ -23,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var Player2: UILabel!
     @IBOutlet var Player3: UILabel!
     @IBOutlet var Player4: UILabel!
+    @IBOutlet weak var winLabel: UILabel!
     var Score1 : Int = 0
     var Score2 : Int = 0
     var Score3 : Int = 0
@@ -39,6 +36,7 @@ class ViewController: UIViewController {
         Player1.text = "Player 1: \(playerScore[0])"
         scoreLabel.isHidden = false
         rollButton.isHidden = false
+        Player1.isHidden = false
     }
     @IBAction func twoPlayers(_ sender: Any) {
         playerScore = [0, 0]
@@ -51,6 +49,8 @@ class ViewController: UIViewController {
         Player2.text = "Player 2: \(playerScore[1])"
         scoreLabel.isHidden = false
         rollButton.isHidden = false
+        Player1.isHidden = false
+        Player2.isHidden = false
     }
     @IBAction func threePlayers(_ sender: Any) {
         playerScore = [0, 0, 0]
@@ -64,6 +64,9 @@ class ViewController: UIViewController {
         Player3.text = "Player 3: \(playerScore[2])"
         scoreLabel.isHidden = false
         rollButton.isHidden = false
+        Player1.isHidden = false
+        Player2.isHidden = false
+        Player3.isHidden = false
     }
     @IBAction func fourPlayers(_ sender: Any) {
         playerScore = [0, 0, 0, 0]
@@ -78,6 +81,10 @@ class ViewController: UIViewController {
         Player4.text = "Player 4: \(playerScore[3])"
         scoreLabel.isHidden = false
         rollButton.isHidden = false
+        Player1.isHidden = false
+        Player2.isHidden = false
+        Player3.isHidden = false
+        Player4.isHidden = false
     }
     
     @IBOutlet weak var rollButton: UIButton!
@@ -95,6 +102,7 @@ class ViewController: UIViewController {
     
     @IBAction func endTurn(_ sender: Any) {
         endTurn.isHidden = true
+        pigOut.isHidden = true
         rollButton.isHidden = false
         if counter == playerScore.count {
             counter = 0
@@ -125,6 +133,17 @@ class ViewController: UIViewController {
             Player4.text = "Player 4: \(playerScore[3])"
         }
         counter += 1
+        let playerCountLength = playerScore.count
+        for number in 0...(playerCountLength-1) {
+            if (playerScore[number]>=10) {
+                winScreen()
+                playAgainButton.isHidden = false
+                Player1.isHidden = true
+                Player2.isHidden = true
+                Player3.isHidden = true
+                Player4.isHidden = true
+            }
+        }
     }
     
     @IBAction func rollPress(_ sender: Any) {
@@ -138,5 +157,27 @@ class ViewController: UIViewController {
         rollButton.isHidden = true
         endTurn.isHidden = false
         }
+    }
+        
+        func winScreen () {
+            winLabel.isHidden = false
+            pigOut.isHidden = true
+            rollButton.isHidden = true
+            endTurn.isHidden = true
+            scoreLabel.isHidden = true
+            Player1.isHidden = true
+            Player2.isHidden = true
+            Player3.isHidden = true
+            Player4.isHidden = true
+        }
+    
+    @IBAction func playAgain(_ sender: Any) {
+        buttonOne.isHidden = false
+        buttonTwo.isHidden = false
+        buttonThree.isHidden = false
+        buttonFour.isHidden = false
+        startQuestion.isHidden = false
+        winLabel.isHidden = true
+        playAgainButton.isHidden = true
     }
 }
