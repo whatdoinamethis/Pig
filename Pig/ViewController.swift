@@ -135,7 +135,7 @@ class ViewController: UIViewController {
         counter += 1
         let playerCountLength = playerScore.count
         for number in 0...(playerCountLength-1) {
-            if (playerScore[number]>=10) {
+            if (playerScore[number] >= 100) {
                 winScreen()
                 playAgainButton.isHidden = false
                 Player1.isHidden = true
