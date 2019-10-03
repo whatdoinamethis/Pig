@@ -142,6 +142,7 @@ class ViewController: UIViewController {
                 Player2.isHidden = true
                 Player3.isHidden = true
                 Player4.isHidden = true
+                winLabel.text = "Player \(counter) wins!"
             }
         }
     }
